@@ -3,7 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Enlace a css -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Enlace a fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Tareas</title>
   </head>
-  <body></body>
+  <body>
+    <!-- Formulario -->
+    <div>
+      <input
+        type="text"
+        aria-colspan="input"
+        autofocus
+        placeholder="Nombre tarea"
+        class="input"
+      />
+      <button class="btn">Add</button>
+      <button class="limpiar">Clean</button>
+    </div>
+
+    <div class="container">
+      <!-- Dentro del ul estarán las tareas -->
+      <ul></ul>
+    </div>
+
+    <!-- Enlace a js -->
+    <script src="./app.js"></script>
+  </body>
 </html>
