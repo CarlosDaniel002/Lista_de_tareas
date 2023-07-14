@@ -50,6 +50,13 @@ const desplegarTareas = () => {
     li.innerHTML = `<p>${tarea.nombre}</p><button class="delete"><i class="fa-solid fa-trash"></i></button>`;
     const deleteBtn = li.querySelector(".delete");
     const cambiarEstado = li.querySelector("p");
+
+    cambiarEstado.addEventListener("click", () => {
+      const tareaId = parseInt(li.getAttribute("data-id"));
+      const tarea = tareas.find((elemento) => elemento.id == tareaId);
+      tarea.completado = !tarea.completado;
+      desplegarTareas();
+    });
     
     /* NOTA: Cuando las funciones de eliminar y cambiar el estado esten completadas, llamarlas aqui */
     /* cambiarEstado.addEventListener("click", estado)*/
