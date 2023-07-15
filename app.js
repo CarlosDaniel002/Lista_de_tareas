@@ -1,22 +1,34 @@
 const btn = document.querySelector(".btn");
-const cleanButton = document.querySelector('.limpiar');
+const cleanButton = document.querySelector(".limpiar");
 
 /* Arreglo */
 let tareas = [];
+
+const desplegarMensaje = (texto, color) => {
+  Toastify({
+    text: texto,
+    duration: 2000,
+    position: "center",
+    style: {
+      background: `${color}`,
+    },
+  }).showToast();
+};
 
 btn.addEventListener("click", () => {
   agregarTarea();
   /* Se llama a la funcion agregar tarea */
 });
 
-cleanButton.addEventListener('click',()=>{
+cleanButton.addEventListener("click", () => {
   CleanTaskList();
-    /* Se llama a la funcion Limpiar la lista de tareas */
-} );
+  /* Se llama a la funcion Limpiar la lista de tareas */
+});
 
 const agregarTarea = () => {
   /* Se captura el valor del input */
   const valor = document.querySelector(".input").value;
+  !valor && desplegarMensaje("Debe completar los campos", "red");
   if (valor) {
     /* Se crea un objeto*/
     const newTarea = {
@@ -27,6 +39,7 @@ const agregarTarea = () => {
     /* Se agrega el objeto al arreglo */
     tareas.push(newTarea);
     if (newTarea) {
+      desplegarMensaje("Agregaste una tarea", "blue");
       desplegarTareas();
     }
     document.querySelector(".input").value = "";
@@ -57,31 +70,30 @@ const desplegarTareas = () => {
       tarea.completado = !tarea.completado;
       desplegarTareas();
     });
-    
-    /* NOTA: Cuando las funciones de eliminar y cambiar el estado esten completadas, llamarlas aqui */
-    /* cambiarEstado.addEventListener("click", estado)*/
 
     deleteBtn.addEventListener("click", () => {
       const taskId = parseInt(li.getAttribute("data-id"));
       eliminarTarea(taskId);
     });
-    
+
     ul.appendChild(li);
   });
 };
 
-function CleanTaskList () {
+function CleanTaskList() {
   tareas = [];
+  desplegarMensaje("Sin tareas", "blue");
   desplegarTareas();
-};
+}
 
-function eliminarTarea (index){
-   // Buscar la tarea en el array utilizando el ID
-   const tareaIndex = tareas.findIndex(tarea => tarea.id === index);
+function eliminarTarea(index) {
+  // Buscar la tarea en el array utilizando el ID
+  const tareaIndex = tareas.findIndex((tarea) => tarea.id === index);
 
-   if (tareaIndex !== -1) {
-     // Eliminar la tarea del array
-     tareas.splice(tareaIndex, 1);
-     desplegarTareas();
+  if (tareaIndex !== -1) {
+    // Eliminar la tarea del array
+    tareas.splice(tareaIndex, 1);
+    desplegarMensaje("Eliminaste una tarea", "red");
+    desplegarTareas();
   }
 }
