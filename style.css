@@ -119,8 +119,7 @@ li {
   text-decoration: none;
 }
 
-.delete,
-.btn {
+.delete{
   -webkit-border-radius: 30;
   -moz-border-radius: 30;
   border-radius: 30px;
@@ -133,11 +132,6 @@ li {
 }
 
 .delete:hover {
-  background: #e60000;
-  background-image: -webkit-linear-gradient(top, #e60000, #ad0000);
-  background-image: -moz-linear-gradient(top, #e60000, #ad0000);
-  background-image: -ms-linear-gradient(top, #e60000, #ad0000);
-  background-image: -o-linear-gradient(top, #e60000, #ad0000);
-  background-image: linear-gradient(to bottom, #e60000, #ad0000);
+  background: #c12a2a;
   text-decoration: none;
 }
