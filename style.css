@@ -126,6 +126,7 @@ li {
   -webkit-border-radius: 30;
   -moz-border-radius: 30;
   border-radius: 30px;
+  border: none;
   font-family: Arial;
   color: #ffffff;
   font-size: 20px;
