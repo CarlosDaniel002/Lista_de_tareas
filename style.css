@@ -38,7 +38,7 @@ h1 {
   color: rgb(255, 0, 0);
 }
 
-img{
+img {
   width: 10%;
   margin-left: auto;
   margin-right: auto;
@@ -119,26 +119,25 @@ li {
   text-decoration: none;
 }
 
-.delete{
-  .btn {
-    -webkit-border-radius: 30;
-    -moz-border-radius: 30;
-    border-radius: 30px;
-    font-family: Arial;
-    color: #ffffff;
-    font-size: 20px;
-    background: #ff0000;
-    padding: 10px 20px 10px 20px;
-    text-decoration: none;
-  }
-  
-  .delete:hover {
-    background: #e60000;
-    background-image: -webkit-linear-gradient(top, #e60000, #ad0000);
-    background-image: -moz-linear-gradient(top, #e60000, #ad0000);
-    background-image: -ms-linear-gradient(top, #e60000, #ad0000);
-    background-image: -o-linear-gradient(top, #e60000, #ad0000);
-    background-image: linear-gradient(to bottom, #e60000, #ad0000);
-    text-decoration: none;
-  }
+.delete,
+.btn {
+  -webkit-border-radius: 30;
+  -moz-border-radius: 30;
+  border-radius: 30px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #ff0000;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.delete:hover {
+  background: #e60000;
+  background-image: -webkit-linear-gradient(top, #e60000, #ad0000);
+  background-image: -moz-linear-gradient(top, #e60000, #ad0000);
+  background-image: -ms-linear-gradient(top, #e60000, #ad0000);
+  background-image: -o-linear-gradient(top, #e60000, #ad0000);
+  background-image: linear-gradient(to bottom, #e60000, #ad0000);
+  text-decoration: none;
 }
